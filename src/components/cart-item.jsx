@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import style from "../styles/cart-item.module.css";
 
 class CartItem extends Component {
   handleIncrement = () => {
@@ -14,24 +15,27 @@ class CartItem extends Component {
   render() {
     const { name, count } = this.props.item;
     return (
-      <li className="item">
-        <div className="item-name-wrap">
-          <span className="item-name">{name}</span>
+      <li className={style.item}>
+        <div className={style["item-name-wrap"]}>
+          <span className={style["item-name"]}>{name}</span>
         </div>
-        <span className="item-count">{count}</span>
+        <span className={style["item-count"]}>{count}</span>
         <button
-          className="item-button item-increase"
+          className={`${style["item-button"]} ${style["item-increase"]}`}
           onClick={this.handleIncrement}
         >
           <i className="fas fa-plus-square"></i>
         </button>
         <button
-          className="item-button item-decrease"
+          className={`${style["item-button"]} ${style["item-decrease"]}`}
           onClick={this.handleDecrement}
         >
           <i className="fas fa-minus-square"></i>
         </button>
-        <button className="item-button item-delete" onClick={this.handleDelete}>
+        <button
+          className={`${style["item-button"]} ${style["item-delete"]}`}
+          onClick={this.handleDelete}
+        >
           <i className="fas fa-trash"></i>
         </button>
       </li>

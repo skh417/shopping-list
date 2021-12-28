@@ -1,22 +1,11 @@
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  outline: none;
-  border: 0;
-  cursor: pointer;
-}
-
 .item {
-  border: 1px solid salmon;
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
 }
 
 .item-name-wrap {
@@ -41,7 +30,7 @@ button {
 .item-decrease,
 .item-delete {
   font-size: 2rem;
-  color: saddlebrown;
+  color: darkslategray;
 }
 
 .item-delete {
@@ -54,6 +43,7 @@ button {
   justify-content: center;
   width: 2rem;
   height: 2rem;
+  color: aliceblue;
   border-radius: 50%;
   padding: 0.6rem;
   background-color: steelblue;

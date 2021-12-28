@@ -1,0 +1,17 @@
+.add-form {
+  padding: 10px 0;
+  height: 60px;
+}
+
+.add-input {
+  width: 200px;
+  height: 100%;
+  padding: 0 0.5rem;
+  margin-right: 10px;
+}
+
+.add-button {
+  border: 1px solid gray;
+  width: 120px;
+  height: 100%;
+}

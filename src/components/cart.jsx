@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CartItem from "./cart-item";
-import "../cart.css";
 import ItemAddForm from "./item-add-form";
+import style from "../styles/cart.module.css";
 
 class Cart extends Component {
   handleAdd = (name) => {
@@ -9,7 +9,7 @@ class Cart extends Component {
   };
   render() {
     return (
-      <>
+      <main className={style.cart}>
         <ItemAddForm onAdd={this.handleAdd} />
         {this.props.items.length >= 1 ? (
           <>
@@ -24,14 +24,17 @@ class Cart extends Component {
                 />
               ))}
             </ul>
-            <button className="cart-reset" onClick={this.props.onReset}>
+            <button
+              className={style["reset-button"]}
+              onClick={this.props.onReset}
+            >
               Reset All
             </button>
           </>
         ) : (
-          <div>비어있음</div>
+          <div className={style.empty}>There is no Item</div>
         )}
-      </>
+      </main>
     );
   }
 }

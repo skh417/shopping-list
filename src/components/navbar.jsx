@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-
+import style from "../styles/navbar.module.css";
 class Navbar extends Component {
   render() {
     return (
-      <nav>
-        <div style={{ fontSize: "40px", color: "pink" }}>
+      <nav className={style.nav}>
+        <div>
           <i className="fas fa-receipt"></i>
         </div>
-        <span>Is's My receipt</span>
+        <span>My Shopping List</span>
       </nav>
     );
   }

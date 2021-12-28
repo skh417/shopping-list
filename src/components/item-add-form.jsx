@@ -1,7 +1,8 @@
-import React, { memo } from "react";
+import React, { memo, useRef } from "react";
+import style from "../styles/item-add-form.module.css";
 
 const ItemAddForm = memo((props) => {
-  const inputRef = React.createRef();
+  const inputRef = useRef();
 
   console.log("애드폼 렌더링");
   const onSubmit = (event) => {
@@ -12,14 +13,14 @@ const ItemAddForm = memo((props) => {
   };
 
   return (
-    <form className="add-form" onSubmit={onSubmit}>
+    <form className={style["add-form"]} onSubmit={onSubmit}>
       <input
         ref={inputRef}
         type="text"
-        className="add-input"
+        className={style["add-input"]}
         placeholder="Type item"
       />
-      <button className="add-button">Add</button>
+      <button className={style["add-button"]}>Add</button>
     </form>
   );
 });
